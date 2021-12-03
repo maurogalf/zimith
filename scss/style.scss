@@ -1,0 +1,402 @@
+@import "./base/reset", "./base/typography", "./base/colores";
+@import "./layout/header", "./layout/footer";
+
+$espacio: 10px;
+
+/*PANTALLA COMPLETA*/
+main {
+    min-height: calc(100vh - 143px - 143px);
+}
+.titulo {
+    letter-spacing: 2px;
+    word-spacing: $espacio;
+    color: $negro;
+    margin: $espacio * 3;/*USO DE OPERACIONES*/
+}
+.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 40px;
+}
+.espaciado {
+    margin-bottom: 30px;
+}
+/*DE LA PAGINA INDEX*/
+.fondoBanner {
+    height: calc( 100vh - 143px);/*USO DE OPERACIONES*/
+    background-image: url("../img/frontpage.jpg");
+    background-position: center;
+    background-size:cover;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.buyNow {
+    padding-left: 5vw;
+    img {
+        transition: all 2s;
+    }
+}
+.buyNow:hover img {
+    transform: scale(1.1);
+    transform: translateX(-20px);
+}
+/*ESTILOS SECCIONES Y PRODUCTOS*/
+
+/*ESTILOS SECCIONES RAPIDAS*/
+.rapidas {
+    margin: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    font-size: 2vw;
+    text-align: right;
+    &__letrero {
+        padding-top: 30vh;
+        color: $blanco;
+    }
+    div:hover {
+            transition: all 1s;
+            font-size: 2.5vw;
+    }
+}
+@for $i from 1 to 4 {
+    .sec-rap-#{$i}
+        {
+            background-image: url("../img/sec-rap-#{$i}.jpg");
+            background-position: center;
+            width: 30vw;
+            height: 500px;
+            max-width: 430px;
+        }
+    
+}
+.destacados {
+    padding: 0px 5vw;
+    text-align: center;
+    &__titulo {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+}
+.tarjetaproducto {
+    text-align: center;
+    background-color: $grisclaro;
+    display: inline-flex;
+    padding: 10px;
+    margin: 10px;    
+    height:min-content;
+    border-radius: 5px;
+    &__foto {
+        max-height: 250px;
+    }
+    &__nombre {
+        font-size: 1rem;
+        padding: 1rem 0px;
+    }
+    &__precio {
+        font-size: 1.5rem;
+        letter-spacing: 110%;
+        padding-bottom: 1rem;
+        &--oferta {
+            font-style: bold;
+            text-decoration: line-through;
+        }
+    }
+}
+.tarjetaproducto:hover {
+    background-color:  $grismedio;
+    div h4, div h3 {
+        background-color:  $grismedio;
+        color: $negro;
+    }
+}
+/*DE LA PAGINA METODOS DE PAGO*/
+form table{
+    margin: 50px ;
+}
+.tablaPagos {
+    text-align: justify;
+    tr {
+        td {
+            padding: 30px;
+        }
+        th {
+            padding: 0px $espacio;
+            background-color: $negro;
+            color: $grisoscuro;
+            overflow: hidden;
+        }
+    }
+}
+.metPago {
+    display: flex;
+    flex-direction: column;
+    padding: 0vw 5vw 5vw 5vw;
+    align-items: center;
+    gap: 50px;
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 24px;
+        max-width: 70%;
+        gap: 50px;
+        div img {
+            border-radius: 5px;
+        }
+    }
+}
+/*DE LAS PAGINAS DE REMERAS Y MUSCULOSAS*/
+@each $sec in rem, hom, musc, acc, nin {
+    .banner#{$sec} {
+        background-image: url("../img/banner-#{$sec}.jpg") ;
+        background-size: cover;
+        min-height: 10rem;
+        margin-bottom: 40px;
+        overflow: hidden;
+        background-position: center;
+        &__titulo {
+            letter-spacing: 0.2rem;
+            padding: 3rem;
+            max-width: 30%;
+        }
+    }
+    
+}
+.bannerhom {
+    &__titulo {
+        color: $grisclaro;
+    }
+}
+.banneracc {
+    &__titulo {
+        color: $grisclaro;
+    }
+}
+.catalogohoja {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 15px;
+}
+.catalogoarticulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75em;
+    gap: 1vw;
+    border-left: 1px solid rgb(139, 138, 137);
+    padding-left: 2vw;
+}
+.filtros {
+    width: 25em;
+    height: max-content;
+    padding: 2vw;
+    div {
+        padding: 15px 40px;
+    }
+}
+
+/*DE LA PAGINA CONTACTO*/
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40vw;
+    justify-content: center;
+    &__img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    &__leyenda {
+        width: 100em;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 15px;
+        p {
+            text-align: center;
+            width: 100%;
+        }
+        a:link {
+            text-decoration: underline;
+            color: $negro;
+            }
+        a:visited {
+            color: $grisoscuro;
+        }
+    }
+}
+
+
+.formulario {
+    background-color: $grisclaro;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    max-width: 40vw;
+    &__campos {
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        &--izq {
+            width: 20em;
+            text-align: left;
+        }
+        &--cen {
+            width: 20em;
+            justify-content: center;
+        }
+        &--der {
+            width: 20em;
+            text-align: right;
+        }
+        p {
+            display: inline-flex ;
+            width: 5rem;
+        }
+    }
+    &__texto {
+        padding: 15px;
+        text-align: center;
+        &--box {
+            width: 90%;
+        }
+    }
+    &__boton {
+        background-color:  $grismedio;
+        color: $negro;
+        padding: 0.2rem;
+    }
+}
+
+/*DE LA PAGINA Quiénes somos*/
+/*EJEMPLO DE USO GRID*/
+#quienSoy {
+    display: grid;
+    grid-template-areas:    
+    "tit tit tit"
+    "fot1 fot1 text1"
+    "mapa mapa mapa"    
+    ;
+    gap: 50px;
+}
+#tit {
+    grid-area: tit;
+}
+#fot1 {
+    grid-area: fot1;
+    border-radius: 5px;
+}
+#text1 {
+    grid-area: text1;
+    background-color: $grisclaro;
+    border-radius: 5px;
+    height: 100%;
+    padding: 2vw;
+}
+#mapa {
+    grid-area: mapa;
+}
+/*DISEÑO RESPONSIVE*/
+@media screen and (max-width: 760px) {
+    #quienSoy {
+        grid-template-areas:    
+        "tit"
+        "fot1"
+        "text1"
+        "mapa"    
+        ;
+    }
+    .rapidas {
+        font-size: 3vw;
+        div:hover {
+                font-size: 3.5vw;
+        }
+    }
+    iframe {
+        width: 90vw;
+        height: 50vw;
+    }
+    nav {
+        width: 30vw;
+        padding: 1rem;
+    }
+    nav ul li {
+        display:list-item;
+        position: relative;
+    }  
+    .dataPages {
+        max-width: 50%;
+        display: flex;
+        padding: 10px;
+        float: right;
+    }
+    .logo {
+        padding-left: 10vw;
+    }
+}
+@media screen and (max-width: 320px) {
+    .rapidas {
+        font-size: 3vw;
+        div:hover {
+                font-size: 3.5vw;
+        }
+    }
+    .sec-rap-1 {
+        max-height: 300px;
+    }
+    .sec-rap-2 {
+        max-height: 300px;
+    }
+    .sec-rap-3 {
+        max-height: 300px;
+    }
+    .centrado {
+        margin: 5px;
+    }
+    .buscador {
+        float:none;
+        padding: 1.5rem;
+    }
+    nav {
+        padding: 0.5rem;
+        ul li {
+            display:list-item;
+            position: relative;
+        }      
+    }
+    ul {
+        padding: 0.5rem;
+    }
+    .logo {
+        padding: 0.5rem;
+    }
+    .newslettersm {
+        word-spacing: 5vw;
+        padding: 10vw;
+    }
+    .dataPages {
+        max-width: 60%;
+        display: flex;
+        padding: 0px;
+        float: right;
+    }
+    .sm {
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+    }
+    .catalogohoja {
+        display: flex;
+        flex-direction: column;
+    }
+    .catalogoarticulos {
+        border-top: 1px solid rgb(139, 138, 137);
+        border-left: none;
+    }
+}

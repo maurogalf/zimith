@@ -1,0 +1,42 @@
+/*ESTILOS PARA FOOTER*/
+footer {
+    background-color: black;
+    color: rgb(139, 138, 137);
+    overflow: hidden;
+}
+.dataPages {
+    max-width: 40%;
+    display: flex;
+    padding: 1rem 0 0 0;
+    float: left;
+}
+.newslettersm {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    padding: 1rem 1rem 0 0;
+    &__email {
+        background-color: white;
+        padding: 0.2rem;
+        margin-top: 0.5rem;
+    }
+    &__suscribir {
+        background-color:  rgb(213, 213, 213);
+        color: black;
+        padding: 0.2rem;
+        margin-top: 0.5rem;
+    }
+}
+div ul li {
+    padding: 0.9vh;
+    float: inline-start;
+}
+.sm {
+    padding: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__logo {
+        max-width: 25px;
+    }
+}

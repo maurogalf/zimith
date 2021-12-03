@@ -1,0 +1,63 @@
+/*ESTILOS PARA EL HEADER*/
+header {
+    background-color: black;
+    color: rgb(139, 138, 137);
+    overflow: hidden;
+}
+.logo {
+    float: left;
+    background-color: black;
+    padding: 20px;
+        &__img {
+            width: 100px;
+        }
+}
+nav {
+    width: 60vw;
+    display: inline-flex;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+}
+nav ul li {
+    padding: 0px 2vw 0px 0px;
+    display:inline-block;
+    position: relative;
+}
+ul {
+    padding: 0;
+    ul {
+        position: absolute;
+        display: none;
+        ul li {
+            display: block;
+            width: 100%;
+            padding: 0px;
+        }
+    }
+    li a:hover {
+        color: rgb(199, 199, 199);
+        }
+    li:hover ul  {
+        z-index: 2;
+        display: block;
+        width: 100%;
+        background-color: black;
+        padding: 0px;
+        }
+}    
+.buscador {
+    float: right;
+    padding: 3.5rem 2.5rem 3.5rem 0px;
+    &__ingresetexto {
+        background-color: white;
+        color: black;
+        padding: 0.2rem;
+    }
+    &__enviar {
+        background-color:  rgb(213, 213, 213);
+        color: black;
+        padding: 0.2rem;
+    }
+}

@@ -1,0 +1,21 @@
+/*TIPOGRAFIA DEL SITIO*/
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.parrafo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: darkslategrey;
+    line-height: 35px;
+}
+.roboto {
+    font-family: 'Roboto Slab', serif;
+}
+/*LINKS*/
+a:link {
+    text-decoration: none;
+    color: rgb(139, 138, 137);
+    }
+a:visited {
+    color: rgb(82, 82, 82);
+}
