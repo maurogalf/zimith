@@ -303,7 +303,7 @@ form table{
     grid-area: mapa;
 }
 /*DISEÑO RESPONSIVE*/
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     #quienSoy {
         grid-template-areas:    
         "tit"
@@ -323,7 +323,7 @@ form table{
         height: 50vw;
     }
     nav {
-        width: 30vw;
+        max-width: 30vw;
         padding: 1rem;
     }
     nav ul li {
@@ -331,16 +331,22 @@ form table{
         position: relative;
     }  
     .dataPages {
-        max-width: 50%;
+        max-width: 80%;
         display: flex;
         padding: 10px;
         float: right;
+        ul {
+            display: inline-flex;
+        }
     }
     .logo {
-        padding-left: 10vw;
+        padding-left: 5vw;
+    }
+    .tarjetaproducto__foto {
+        max-height: 200px;
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     .rapidas {
         font-size: 3vw;
         div:hover {
@@ -364,6 +370,7 @@ form table{
         padding: 1.5rem;
     }
     nav {
+        max-width: 60vw;
         padding: 0.5rem;
         ul li {
             display:list-item;
@@ -386,6 +393,15 @@ form table{
         padding: 0px;
         float: right;
     }
+    .dataPages {
+        max-width: 65%;
+        display: flex;
+        padding: 10px;
+        float: right;
+        ul {
+            display:list-item;
+        }
+    }    
     .sm {
         padding: 5px;
         margin: 0;
