@@ -85,8 +85,8 @@
                     <h5 class="p-2 text-center">Estampa a un color en frente. Tinta con base soft.</h5>
                     <h2 class="p-1 text-center">$1.990</h2>
                     <div class="dropdown p-3 d-flex justify-content-between">
-                        <button class="btn btn-secondary dropdown-toggle btn-md-lg m-md-3 " type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle btn-md-lg m-md-3 " type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Talle
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -96,8 +96,8 @@
                             <li><a class="dropdown-item disabled" href="#">XL - Exxtra Large</a></li>
 
                         </ul>
-                        <button class="btn btn-secondary dropdown-toggle btn-md-lg m-md-3" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-secondary dropdown-toggle btn-md-lg m-md-3" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             Color
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -105,7 +105,26 @@
                         </ul>
                     </div>
                     <div class="p-3 d-flex justify-content-center">
-                    <button type="button" class="btn btn-md-lg btn-info align-content-center">Comprar</button>
+                        <button type="button" class="btn btn-md-lg btn-info align-content-center" data-bs-toggle="modal" data-bs-target="#constru">Comprar</button>
+                    </div>
+                    <div class="modal fade" id="constru" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">En construcción...</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Próximamente podrás adquirir nuestros productos. 
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,7 +160,8 @@
         <div class="newslettersm">
             <form>
                 <span>Suscríbete a nuestro newsletter</span><input class="newslettersm__email" type="text"
-                    placeholder="Introduzca su email"><input class="newslettersm__suscribir" type="submit" value="Suscribir">
+                    placeholder="Introduzca su email"><input class="newslettersm__suscribir" type="submit"
+                    value="Suscribir">
             </form>
             <div class="sm">
                 <a href="https://www.instagram.com/zimithok" target="_blank"><img class="sm__logo"
@@ -158,6 +178,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-        
+
 </body>
+
 </html>
