@@ -106,6 +106,18 @@ main {
             text-decoration: line-through;
         }
     }
+    &__boton {
+        padding: 0.2rem;
+        font-size: 1.5rem;
+        background-color: $blanco;
+        color: $grisoscuro;
+        border-radius: 5px;
+    }
+    &__boton:hover {
+        background-color: $grisclaro;
+        color: $negro;
+        cursor: pointer;
+    }
 }
 .tarjetaproducto:hover {
     background-color:  $grismedio;

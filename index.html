@@ -36,10 +36,10 @@
             </ul>
         </nav>
         <!-- buscador -->
-        <div class="buscador">
-            <input class="buscador__ingresetexto" type="text" name="search"><input type="button"
-                class="buscador__enviar" value="Buscar" name="buscar">
-        </div>
+        <form id="buscador" class="buscador">
+            <input placeholder="Buscar articulos" class="buscador__ingresetexto" type="text" name="search">
+            <input href="resultado-busqueda.html"type="submit" class="buscador__enviar" value="Buscar" name="buscar">
+        </form>
     </header>
     <!-- Fin Header -->
 
@@ -71,7 +71,7 @@
         <!-- FIN Secciones Rapidas -->
 
         <!-- Nuevos ingresos INICIO -->
-        <section class="destacados">
+        <section id="lastest" class="destacados">
             <h2 class="destacados__titulo">Nuevos Ingresos</h2>
             <article class="tarjetaproducto">
                 <a href="producto.html">
@@ -201,6 +201,9 @@
         </div>
     </footer>
     <!-- Fin Footer -->
+    <script src="./javascript/products.js"></script>
+    <script src="./javascript/main.js"></script>
+    <script src="./javascript/lastest-products.js"></script>
 </body>
 
 </html>

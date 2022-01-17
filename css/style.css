@@ -232,6 +232,16 @@ main {
     .tarjetaproducto__precio--oferta {
       font-style: bold;
       text-decoration: line-through; }
+  .tarjetaproducto__boton {
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #8b8a89;
+    border-radius: 5px; }
+  .tarjetaproducto__boton:hover {
+    background-color: #f2f2f2;
+    color: black;
+    cursor: pointer; }
 
 .tarjetaproducto:hover {
   background-color: #d5d5d5; }
