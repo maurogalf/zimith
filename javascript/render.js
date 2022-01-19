@@ -4,7 +4,6 @@ const categoria = document.title
 
 
 function renderProductos(articulos, categoriaProducto, etiqueta){
-    etiqueta.innerHTML="";
     for (let i = 0; i < productos.length; i++){
         if(articulos[i].rubro === categoriaProducto){
             const art = document.createElement("article");
@@ -48,9 +47,9 @@ function renderProductos(articulos, categoriaProducto, etiqueta){
 }
 function vistaProducto(event){
     localStorage.removeItem('productoSeleccionado');
-    console.log(event.target)
     const productoElegido = event.target.id;
-    localStorage.setItem('productoSeleccionado', productoElegido)
+    const productoenvista = productos.find (producto => producto.codigo === productoElegido);
+    localStorage.setItem('productoSeleccionado', JSON.stringify(productoenvista))
 }
 renderProductos(productos, categoria, catalogo);
 

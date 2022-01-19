@@ -35,8 +35,8 @@ function renderProductos(articulos, coincidencia, etiqueta){
 
 function vistaProducto(event){
     localStorage.removeItem('productoSeleccionado');
-    console.log(event.target)
     const productoElegido = event.target.id;
-    localStorage.setItem('productoSeleccionado', productoElegido)
+    const productoenvista = productos.find (producto => producto.codigo === productoElegido);
+    localStorage.setItem('productoSeleccionado', JSON.stringify(productoenvista))
 }
 renderProductos(productos, productoBuscado, catalogo)
