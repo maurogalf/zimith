@@ -82,6 +82,16 @@ main {
         padding: 2rem;
     }
 }
+.botonera {
+    display: inline-flex;
+    text-align: center;
+    width: 30%;
+    align-content: center;
+    justify-content: space-between;
+    &__boton {
+        max-width: 50px;
+    }
+}
 .tarjetaproducto {
     text-align: center;
     background-color: $grisclaro;
@@ -256,7 +266,7 @@ form table{
         font-size: 1.2rem;
         text-align: center;
         padding: 15px;
-        p {
+        label {
             text-align: center;
             width: 100%;
         }
@@ -277,7 +287,7 @@ form table{
     display: flex;
     flex-direction: column;
     padding: 15px;
-    max-width: 40vw;
+    max-width: 50vw;
     &__campos {
         padding: 15px;
         display: flex;
@@ -294,7 +304,7 @@ form table{
             width: 20em;
             text-align: right;
         }
-        p {
+        label {
             display: inline-flex ;
             width: 5rem;
         }
@@ -311,6 +321,16 @@ form table{
         color: $negro;
         padding: 0.2rem;
     }
+}
+.tilde {
+    display: inline-flex ;
+    color: $verde;
+    width: 1em;
+}
+.cruz {
+    display: inline-flex ;
+    color: $rojo;
+    width: 1em;
 }
 
 /*DE LA PAGINA Quiénes somos*/

@@ -212,6 +212,15 @@ main {
     font-size: 2rem;
     padding: 2rem; }
 
+.botonera {
+  display: inline-flex;
+  text-align: center;
+  width: 30%;
+  align-content: center;
+  justify-content: space-between; }
+  .botonera__boton {
+    max-width: 50px; }
+
 .tarjetaproducto {
   text-align: center;
   background-color: #f2f2f2;
@@ -403,7 +412,7 @@ form table {
     font-size: 1.2rem;
     text-align: center;
     padding: 15px; }
-    .contacto__leyenda p {
+    .contacto__leyenda label {
       text-align: center;
       width: 100%; }
     .contacto__leyenda a:link {
@@ -418,7 +427,7 @@ form table {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  max-width: 40vw; }
+  max-width: 50vw; }
   .formulario__campos {
     padding: 15px;
     display: flex;
@@ -432,7 +441,7 @@ form table {
     .formulario__campos--der {
       width: 20em;
       text-align: right; }
-    .formulario__campos p {
+    .formulario__campos label {
       display: inline-flex;
       width: 5rem; }
   .formulario__texto {
@@ -444,6 +453,16 @@ form table {
     background-color: #d5d5d5;
     color: black;
     padding: 0.2rem; }
+
+.tilde {
+  display: inline-flex;
+  color: #15b615;
+  width: 1em; }
+
+.cruz {
+  display: inline-flex;
+  color: red;
+  width: 1em; }
 
 /*DE LA PAGINA Quiénes somos*/
 /*EJEMPLO DE USO GRID*/

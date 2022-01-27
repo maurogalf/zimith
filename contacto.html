@@ -14,6 +14,7 @@
     <title>Contacto | Zimith</title>
     <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -61,44 +62,7 @@
         </div>
         <!-- Inicio formulario -->
         <div class="formulario">
-            <form>
-                <div class="formulario__campos">
-                    <div class="formulario__campos--izq">
-                        <p>Nombre: </p><input type="text" name="nombre">
-                    </div>
-                    <div class="formulario__campos--der">
-                        <p>Apellido: </p><input type="text" name="apellido">
-                    </div>
-                </div>
-                <div class="formulario__campos">
-                    <div class="formulario__campos--izq">
-                        <p>Empresa: </p><input type="text" name="empresa">
-                    </div>
-                    <div class="formulario__campos--der">
-                        <p>Email: </p><input type="text" name="email">
-                    </div>
-                </div>
-                <div class="formulario__campos">
-                    <div class="formulario__campos--cen">
-                        <select name="area">
-                            <option value="Compras Minoristas">Compras Minoristas</option>
-                            <option value="Compras Mayoristas">Compras Mayoristas</option>
-                            <option value="Ventas Minoristas">Ventas Minoristas</option>
-                            <option value="Ventas Mayoristas">Ventas Mayoristas</option>
-                            <option value="Recursos Humanos">Recursos Humanos</option>
-                            <option value="Administracion">Administración</option>
-                        </select>
-                    </div>
-                    <div class="formulario__campos--cen">Recibir Newsletter <input type="checkbox" name="newsletter">
-                    </div>
-                </div>
-                <div class="formulario__texto"><textarea name="Ingrese su consulta" id="consulta" cols="80" rows="10"
-                        placeholder="Ingrese su consulta"></textarea>
-                </div>
-                <div class="formulario__campos">
-                    <div class="formulario__campos--cen"><input class="formulario__boton" type="submit" value="Envio"></div>
-                    <div class="formulario__campos--cen"><input class="formulario__boton" type="reset" value="Reset"></div>
-                </div>
+            <form id="form">
             </form>
         </div>
     </main>
@@ -139,6 +103,7 @@
     <!-- Fin Footer -->
 
     <script src="./javascript/main.js"></script>
+    <script src="./javascript/contact.js"></script>
 </body>
 
 </html>

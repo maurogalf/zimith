@@ -4,7 +4,7 @@ const tituloLastest = document.createElement("h2");
 tituloLastest.className = "destacados__titulo";
 tituloLastest.innerText = "Nuevos Ingresos";
 lastestProducts.appendChild(tituloLastest);
-for (let i = (productos.length - 4) ; i < productos.length; i++){
+for (i = (productos.length - 4) ; i < productos.length; i++){
         const art = document.createElement("article");
         art.setAttribute('class', 'tarjetaproducto');
         const boton = document.createElement('button');
@@ -22,10 +22,10 @@ for (let i = (productos.length - 4) ; i < productos.length; i++){
         `;
         lastestProducts.appendChild(art)
     }
-    function vistaProducto(event){
-        localStorage.removeItem('productoSeleccionado');
-        console.log(event.target)
-        const productoElegido = event.target.id;
-        localStorage.setItem('productoSeleccionado', productoElegido)
-    }
-    
+function vistaProducto(event){
+    localStorage.removeItem('productoSeleccionado');
+    const productoElegido = event.target.id;
+    const productoenvista = productos.find (producto => producto.codigo === productoElegido);
+    localStorage.setItem('productoSeleccionado', JSON.stringify(productoenvista))
+}
+
