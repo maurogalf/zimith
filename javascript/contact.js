@@ -37,18 +37,21 @@ $('#form').append(`
                     <div class="formulario__campos--cen"><input class="formulario__boton" type="reset" value="Reset"></div>
                 </div>`);
 
-$("#send").click(function(e) {
-    $('#form').empty();
+$("#send").click(()=> {
+    $('#form').animate({
+        height: '-=350px',
+        width: '-=200px'
+    }).empty(1000);
     $('#form').append(`<div>
     <p>Se ha enviado correctamente el formulario</p>
-</div>`)
+    </div>`)
 })
+
 
 
 $("input").on('change', function(e){
     let valor = e.target;
     if ((valor.value) !== ""){
-        console.log("llega")
     $(valor).parent().children(".tilde").remove();    
     $(valor).parent().children(".cruz").remove();    
     $(valor).parent().append('<p class="tilde">✓</p>')

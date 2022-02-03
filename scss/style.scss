@@ -341,8 +341,13 @@ form table{
     "tit tit tit"
     "fot1 fot1 text1"
     "mapa mapa mapa"    
+    "staff staff staff"
     ;
     gap: 50px;
+}
+#staff{
+    grid-area: staff;
+    max-width: 100vw;
 }
 #tit {
     grid-area: tit;
@@ -352,6 +357,7 @@ form table{
     border-radius: 5px;
 }
 #text1 {
+    max-width: 100vw;
     grid-area: text1;
     background-color: $grisclaro;
     border-radius: 5px;
@@ -361,6 +367,40 @@ form table{
 #mapa {
     grid-area: mapa;
 }
+.flecha {
+    max-width: 5vw;
+}
+.cardsStaff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75em;
+    gap: 1vw;
+    &__employee{
+        text-align: center;
+        background-color: $grisclaro;
+        display: inline-flex;
+        padding: 10px;
+        margin: 10px;    
+        height:min-content;
+        border-radius: 5px;
+        &--foto {
+            max-height: 250px;
+        }
+        &--nombre {
+            font-size: 1rem;
+            padding: 1rem 0px;
+        }
+        &--ciudad {
+            font-size: 0.7rem;
+            text-decoration: dashed;
+        }
+        &--puesto{
+            font-size: 1rem;
+            padding: 1rem 0px;
+        }
+    }
+}
 /*DISEÑO RESPONSIVE*/
 @media screen and (max-width: 768px) {
     #quienSoy {
@@ -368,7 +408,8 @@ form table{
         "tit"
         "fot1"
         "text1"
-        "mapa"    
+        "mapa"
+        "staff"    
         ;
     }
     .rapidas {

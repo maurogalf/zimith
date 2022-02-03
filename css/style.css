@@ -468,8 +468,12 @@ form table {
 /*EJEMPLO DE USO GRID*/
 #quienSoy {
   display: grid;
-  grid-template-areas: "tit tit tit" "fot1 fot1 text1" "mapa mapa mapa";
+  grid-template-areas: "tit tit tit" "fot1 fot1 text1" "mapa mapa mapa"     "staff staff staff";
   gap: 50px; }
+
+#staff {
+  grid-area: staff;
+  max-width: 100vw; }
 
 #tit {
   grid-area: tit; }
@@ -479,6 +483,7 @@ form table {
   border-radius: 5px; }
 
 #text1 {
+  max-width: 100vw;
   grid-area: text1;
   background-color: #f2f2f2;
   border-radius: 5px;
@@ -488,10 +493,39 @@ form table {
 #mapa {
   grid-area: mapa; }
 
+.flecha {
+  max-width: 5vw; }
+
+.cardsStaff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75em;
+  gap: 1vw; }
+  .cardsStaff__employee {
+    text-align: center;
+    background-color: #f2f2f2;
+    display: inline-flex;
+    padding: 10px;
+    margin: 10px;
+    height: min-content;
+    border-radius: 5px; }
+    .cardsStaff__employee--foto {
+      max-height: 250px; }
+    .cardsStaff__employee--nombre {
+      font-size: 1rem;
+      padding: 1rem 0px; }
+    .cardsStaff__employee--ciudad {
+      font-size: 0.7rem;
+      text-decoration: dashed; }
+    .cardsStaff__employee--puesto {
+      font-size: 1rem;
+      padding: 1rem 0px; }
+
 /*DISEÑO RESPONSIVE*/
 @media screen and (max-width: 768px) {
   #quienSoy {
-    grid-template-areas: "tit" "fot1" "text1" "mapa"; }
+    grid-template-areas: "tit" "fot1" "text1" "mapa" "staff"; }
   .rapidas {
     font-size: 3vw; }
     .rapidas div:hover {

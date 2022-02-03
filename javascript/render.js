@@ -4,7 +4,7 @@ const categoria = document.title
 
 
 function renderProductos(articulos, categoriaProducto, etiqueta){
-    for (let i = 0; i < productos.length; i++){
+    for (let i = 0; i < articulos.length; i++){
         if(articulos[i].rubro === categoriaProducto){
             const art = document.createElement("article");
                 art.setAttribute('class', 'tarjetaproducto');
@@ -17,7 +17,7 @@ function renderProductos(articulos, categoriaProducto, etiqueta){
                 <h3 class="tarjetaproducto__nombre">${articulos[i].nombre}</h3>
                 <h4 class="tarjetaproducto__precio">$${articulos[i].precio}</h4>
                 <a href="producto.html">
-                <button class= "tarjetaproducto__boton" id="${articulos[i].codigo}" href="product.html">Ver producto</button>
+                <button class= "tarjetaproducto__boton" id="${articulos[i].codigo}" href="producto.html">Ver producto</button>
                 </a>
                 </div>
                 `;
@@ -36,7 +36,7 @@ function renderProductos(articulos, categoriaProducto, etiqueta){
                 <h3 class="tarjetaproducto__nombre">${articulos[i].nombre}</h3>
                 <h4 class="tarjetaproducto__precio">$${articulos[i].precio}</h4>
                 <a href="producto.html">
-                <button class= "tarjetaproducto__boton" id="${articulos[i].codigo}" href="product.html">Ver producto</button>
+                <button class= "tarjetaproducto__boton" id="${articulos[i].codigo}" href="producto.html">Ver producto</button>
                 </a>
                 </div>
                 `;
@@ -51,5 +51,6 @@ function vistaProducto(event){
     const productoenvista = productos.find (producto => producto.codigo === productoElegido);
     localStorage.setItem('productoSeleccionado', JSON.stringify(productoenvista))
 }
-renderProductos(productos, categoria, catalogo);
+
+renderProductos(productos, categoria, catalogo)  
 
