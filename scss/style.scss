@@ -401,6 +401,13 @@ form table{
         }
     }
 }
+.dropdown-menu{
+    min-width: auto;
+}
+.linea-carrito:hover {
+    background-color: $grisclaro;
+}
+
 /*DISEÑO RESPONSIVE*/
 @media screen and (max-width: 768px) {
     #quienSoy {

@@ -54,10 +54,71 @@ ul {
         background-color: white;
         color: black;
         padding: 0.2rem;
+        height: 35px;
+        border: 1px solid transparent;
+        border-radius: .25rem;
     }
     &__enviar {
-        background-color:  rgb(213, 213, 213);
-        color: black;
         padding: 0.2rem;
+        cursor: pointer;
+        color: $negro;
+        background-color: $grismedio;
+        border-color: $grismedio;
+        display: inline-block;
+        line-height: 1.5;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        user-select: none;
+        height: 35px;
+        border: 1px solid transparent;
+        font-size: 1rem;
+        border-radius: .25rem;
     }
+    &__enviar:hover {
+        background-color: $grisoscuro;
+
+    }
+
 }
+.btn-carrito:hover {
+    background-color: $grisoscuro;
+}
+.btn-carrito {
+    position: relative!important;
+    cursor: pointer;
+    color: $negro;
+    background-color: $grismedio;
+    border-color: $grismedio;
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    height: 35px;
+    width: 35px;
+    font-size: 1rem;
+    border-radius: .25rem;
+}
+.burbuja-carrito{
+    border-radius: 50rem!important;
+    --bs-bg-opacity: 1;
+    background-color: rgb(161, 42, 48)!important;
+    transform: translate(-50%,-50%)!important;
+    left: 100%!important;
+    top: 0!important;
+    position: absolute!important;
+    display: inline-block;
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+}
+
