@@ -1,5 +1,10 @@
 var valorBuscado = document.getElementById('buscador');
 
+if(obtenerCarrito('carrito')){
+    carrito = obtenerCarrito('carrito');
+}else {
+    localStorage.setItem('carrito', 0)
+}
 valorBuscado.onsubmit = function(event) {
     event.preventDefault();
     const input = event.target.children;
@@ -16,7 +21,6 @@ function guardarCarrito(clave, valor) {
     localStorage.setItem(clave, JSON.stringify(valor));
 }
 
-carrito = obtenerCarrito('carrito');
 
 $("#buscador").append(`<button id="btn-carrito" type="button" class="btn-carrito">
 🛒
