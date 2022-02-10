@@ -3,9 +3,11 @@ var valorBuscado = document.getElementById('buscador');
 if(obtenerCarrito('carrito')){
     carrito = obtenerCarrito('carrito');
 }else {
-    localStorage.setItem('carrito', []);
+    let carroNuevo = [];
+    localStorage.setItem('carrito', JSON.stringify(carroNuevo));
     carrito = obtenerCarrito('carrito');
 }
+
 valorBuscado.onsubmit = function(event) {
     event.preventDefault();
     const input = event.target.children;
