@@ -3,7 +3,7 @@ var valorBuscado = document.getElementById('buscador');
 if(obtenerCarrito('carrito')){
     carrito = obtenerCarrito('carrito');
 }else {
-    localStorage.setItem('carrito', 0);
+    localStorage.setItem('carrito', []);
     carrito = obtenerCarrito('carrito');
 }
 valorBuscado.onsubmit = function(event) {
