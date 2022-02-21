@@ -430,8 +430,14 @@ form table {
   width: 25em;
   height: max-content;
   padding: 2vw; }
+  .filtros option {
+    font-size: 1rem; }
   .filtros div {
-    padding: 15px 40px; }
+    padding: 15px 30px; }
+
+.filtro {
+  font-size: 1rem;
+  width: 45%; }
 
 /*DE LA PAGINA ERROR 404*/
 .error {
@@ -454,6 +460,41 @@ form table {
     margin-bottom: 2vw; }
 
 /*DE LA PAGINA CONTACTO*/
+#mask {
+  position: absolute;
+  z-index: 1;
+  background-color: #000;
+  display: none; }
+
+#boxes {
+  display: flex;
+  justify-content: space-evenly; }
+
+#boxes .window {
+  margin-top: 50vh;
+  color: white;
+  position: fixed;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+  gap: 15px; }
+
+#mensaje {
+  font-size: 2rem;
+  margin-bottom: 6vh; }
+
+.close {
+  position: relative;
+  padding: 15px;
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: white; }
+
+#boxes #dialog {
+  width: 50vw;
+  height: 50vh;
+  text-align: center; }
+
 .contacto {
   display: flex;
   flex-direction: column;
@@ -583,6 +624,15 @@ form table {
 
 .linea-carrito:hover {
   background-color: #f2f2f2; }
+
+.tb-r {
+  text-align: right; }
+
+.tb-l {
+  text-align: left; }
+
+.tb-c {
+  text-align: center; }
 
 /*DISEÑO RESPONSIVE*/
 @media screen and (max-width: 768px) {

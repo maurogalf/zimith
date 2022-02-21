@@ -25,18 +25,12 @@ $('#productView').append(`
                 class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            <button id="3er-boton" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="${productoSeleccionado.img}" class="d-block w-100" alt="${productoSeleccionado.nombre}">
-            </div>
-            <div class="carousel-item">
-                <img src="${productoSeleccionado.img2}" class="d-block w-100" alt="${productoSeleccionado.nombre}">
-            </div>
-            <div class="carousel-item">
-                <img src="${productoSeleccionado.img3}" class="d-block w-100" alt="${productoSeleccionado.nombre}">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -69,6 +63,23 @@ $('#productView').append(`
     </div>
 </div>`);
 
+if(productoSeleccionado.img2 != undefined) {
+    $('.carousel-inner').append(`<div class="carousel-item">
+    <img src="${productoSeleccionado.img2}" class="d-block w-100" alt="${productoSeleccionado.nombre}">
+</div>`)
+    if(productoSeleccionado.img3 != undefined){
+        $('.carousel-inner').append(`<div class="carousel-item">
+        <img src="${productoSeleccionado.img3}" class="d-block w-100" alt="${productoSeleccionado.nombre}">
+        </div>`)
+    } else {
+        $('#3er-boton').remove();
+    }
+} else {
+    $('.carousel-indicators').remove();
+    $('.carousel-control-prev').remove();
+    $('.carousel-control-next').remove();
+    
+}
 const stock = document.getElementById("stock-lista");
 
 if(obtenerCarrito('carrito')){
