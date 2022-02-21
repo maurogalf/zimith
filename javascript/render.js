@@ -17,7 +17,6 @@ $(".filtros").append(`
 let arregloCategoria = [];
 function arregloSeccion() {
 if (categoria === "Hombres | Zimith"){
-    console.log("pasa por aca")
     let categoriaRemera = productos.filter(producto => producto.rubro === "Remeras | Zimith")
     let categoriaMusculosa = productos.filter(producto => producto.rubro === "Musculosas | Zimith")
     let arregloCategoria = categoriaRemera.concat(categoriaMusculosa);
@@ -79,10 +78,9 @@ function filtros(articulos){
     let filtroTalle = talles.filter((item,index)=>{
         return talles.indexOf(item) === index; })
         for(let i = 0; i< filtroTalle.length; i++){
-        console.log(filtroTalle[i])
             $("#filtro-talle").append(`
-        <option id="color"><a class="dropdown-item" href="#">${filtroTalle[i]}</a></option>
-        `)
+            <option id="color"><a class="dropdown-item" href="#">${filtroTalle[i]}</a></option>
+            `)
     }
 }
 
