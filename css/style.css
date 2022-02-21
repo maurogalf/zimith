@@ -634,6 +634,30 @@ form table {
 .tb-c {
   text-align: center; }
 
+.vaciarCarrito {
+  display: flex;
+  float: right; }
+
+.btn-vaciarCarrito {
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  color: black;
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  height: 35px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  border-radius: .25rem; }
+
+.btn-vaciarCarrito:hover {
+  background-color: #8b8a89; }
+
 /*DISEÑO RESPONSIVE*/
 @media screen and (max-width: 768px) {
   #quienSoy {

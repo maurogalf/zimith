@@ -39,21 +39,31 @@ if(carrito && carrito.length !== 0){
         location.replace("producto.html")
     })    
     calculaTotal();
+    $('#carrito').append(`
+    <div class="vaciarCarrito">
+    <button id="btn-vaciarCarrito" class="btn-vaciarCarrito">Vaciar Carrito 🛒</button>
+    </div>`)
 }else {
     $("#carrito").append(`
     <h1>El carrito se encuentra vacio</h1>
-    
     `)}
+
+$('#btn-vaciarCarrito').click(()=>{
+    console.log("pasa por aca")
+    localStorage.removeItem('carrito');
+    location.reload();
+})
+
 $("button").click((e)=>{
     carrito = obtenerCarrito('carrito');
     let borra = e.target.id;
-    console.log($(`#linea-${borra}`))
     $(`#linea-${borra}`).remove();
     var carrito = carrito.filter((item) => item.codigo !== borra)
     guardarCarrito('carrito', carrito);
     $(".burbuja-carrito").empty();
     $(".burbuja-carrito").append(`${carrito.length}`);
     calculaTotal();
+
 })
 
 function calculaTotal(){
